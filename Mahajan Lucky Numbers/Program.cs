@@ -47,8 +47,39 @@ namespace Mahajan_Lucky_Numbers
 
             //PART III
             int jackpot = 2468975;
-            int numbersRight;
-            int userWinnings = jackpot * numbersRight;
+            int numbersRight = 0;
+            
+
+            foreach (int guess in userGuess)
+            {
+                if ( guess == randoGen[0])
+                { numbersRight++;
+                }
+                else if (guess == randoGen[1])
+                { numbersRight++;
+                }
+                else if (guess == randoGen[2])
+                { numbersRight++;
+                }
+                else if (guess == randoGen[3])
+                { numbersRight++;
+                }
+                else if (guess == randoGen[4])
+                { numbersRight++;
+                }
+                else if (guess == randoGen[5])
+                { numbersRight++;
+                }
+                else
+                { numbersRight = 0;
+                }
+
+                
+            }
+                int userWinnings = jackpot * (1/numbersRight);
+                Console.WriteLine("Your winnings are $" + userWinnings + "!");
+            
+               
 
 
 
