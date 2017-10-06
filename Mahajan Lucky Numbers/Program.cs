@@ -18,19 +18,38 @@ namespace Mahajan_Lucky_Numbers
 
             Console.WriteLine("Now, let's have a little MORE fun and check on your prescient abilities. Type in the SIX (6) numbers you think will be generated within your number range, hitting ENTER after each number is typed.");
             int[] userGuess = new int[6];
+
             for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine("Enter a number for me");
+            { Console.WriteLine("Enter a number for me");
                 userGuess[i] = int.Parse(Console.ReadLine());
-                if (userGuess[i] < 0 || userGuess[i] >= rangeStart || userGuess[i] <= rangeEnd)
-                {
-                    Console.WriteLine("That's not a number I can use here, buddy. Let's try again.");
-                    break;
+
+                if (userGuess[i] >= rangeStart || userGuess[i] <= rangeEnd)
+                { Console.WriteLine("Excellent");
                 }
-                
+
+                else if (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
+                { Console.WriteLine("That's not a number I can use.");
+                  break;
+                }
             }
 
             Console.WriteLine("Thanks!");
+            Console.WriteLine("And now the great and powerful Luckster Number Generator will give you 6 numbers.");
+
+            //PART II
+            int[] randoGen = new int[6];
+            Random randoNum = new Random();
+
+            for (int i = 0; i <= 5; i++)
+            { randoGen[i] = randoNum.Next(rangeStart, rangeEnd);
+                Console.WriteLine("Lucky Number: " + randoGen[i]);
+            }
+
+            //PART III
+            int jackpot = 2468975;
+            int numbersRight;
+            int userWinnings = jackpot * numbersRight;
+
 
 
 
