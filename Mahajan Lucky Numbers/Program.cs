@@ -38,7 +38,6 @@ namespace Mahajan_Lucky_Numbers
 
                     else 
                     {
-                        //PROBLEM
                         while (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
                         {
                             Console.WriteLine("That's not a number I can use. How about you give me something within the range you set?");
@@ -58,6 +57,12 @@ namespace Mahajan_Lucky_Numbers
                 {
                     randoGen[i] = randoNum.Next(rangeStart, rangeEnd);
                     Console.WriteLine("Lucky Number: " + randoGen[i]);
+                    
+                    //while (randoGen[0] == randoGen[1] == randoGen[2] == randoGen[3] == randoGen[4] == randoGen[5])
+                    //{
+                    //    i--;
+                    //    break;
+                    //}
                 }
 
                 //PART III
