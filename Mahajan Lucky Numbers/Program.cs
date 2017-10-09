@@ -12,7 +12,7 @@ namespace Mahajan_Lucky_Numbers
         {
             Console.Write("Why hello there! YOU have been selected by the GREAT LUCKSTER for a chance to win a RIDICULOUS AMOUNT OF MONEY! \nI'll let you know how much... at some point... maybe.\n");
             //PART OF PART IV
-            Console.WriteLine("Would you like a chance to win this jackpot? \n\nEven if you get only a FEW numbers right, you'll still win a portion. \nType YES if you'd like to play.");
+            Console.WriteLine("Would you like a chance to win this jackpot? \n\nEven if you get only a FEW numbers right, you'll still win a portion. \nType YES and hit ENTER if you'd like to play.");
             string answer = Console.ReadLine().ToLower().Trim();
 
             while (answer == "yes")
@@ -63,7 +63,7 @@ namespace Mahajan_Lucky_Numbers
                 //PART III
                 int jackpot = 2468975;
                 int numbersRight = 0;
-                Console.WriteLine("\n\n\n\nYou are so VERY CLOSE TO $" +jackpot+ "!");                
+                Console.WriteLine("\n\n\n\nYou are so VERY CLOSE TO the $" +jackpot+ "JACKPOT!");                
 
                 foreach (int guess in userGuess)
                 {
@@ -93,11 +93,11 @@ namespace Mahajan_Lucky_Numbers
                     }
                 }
 
-                Console.WriteLine("You guessed " +numbersRight+ " numbers right!");
+                Console.WriteLine("You guessed " +numbersRight+ " of the numbers right!");
                 int userWinnings = (jackpot/6)*(numbersRight);
                 Console.WriteLine("\nYour winnings are $" + userWinnings + "!");
 
-                Console.WriteLine("\nWould you like to play again?");
+                Console.WriteLine("\nWould you like to play again? Type YES and ENTER if so.");
                 answer = Console.ReadLine();
                 while (answer == "yes")
                     { break;
