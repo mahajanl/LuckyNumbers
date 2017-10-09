@@ -35,24 +35,21 @@ namespace Mahajan_Lucky_Numbers
                         Console.WriteLine("Excellent");
                     }
 
-                    else if (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
+                    else 
                     {
-                        Console.WriteLine("That's not a number I can use.");
                         //PROBLEM
                         while (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
                         {
-                            for (int j = 0; j <= 0; j++)
-                            {Console.WriteLine("Enter a number for me");
-                             userGuess[i] = int.Parse(Console.ReadLine());
-                            }
+                            Console.WriteLine("That's not a number I can use.");
+                            i--;
+                            break;
                         }
+                        
                     }
                 }
-
-
+                
                 Console.WriteLine("\nAnd now the great and powerful Luckster Number Generator will give you 6 numbers.\n\n");
-
-
+                
                 //PART II
                 int[] randoGen = new int[6];
                 Random randoNum = new Random();
