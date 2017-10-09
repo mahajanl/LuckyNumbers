@@ -41,7 +41,7 @@ namespace Mahajan_Lucky_Numbers
                         //PROBLEM
                         while (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
                         {
-                            Console.WriteLine("That's not a number I can use. How about you gice me something within the range you set?");
+                            Console.WriteLine("That's not a number I can use. How about you give me something within the range you set?");
                             i--;
                             break;
                         }
