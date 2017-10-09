@@ -17,7 +17,7 @@ namespace Mahajan_Lucky_Numbers
 
             while (answer == "yes")
             {
-                Console.WriteLine("First, in order to play, you'll have to give me TWO numbers, one at a time. This will be the HIGHEST and LOWEST numbers possible. Enter the LOWEST one for me now.");
+                Console.WriteLine("First, in order to play, you'll have to give me TWO numbers, one at a time. These will be the HIGHEST and LOWEST numbers possible. Enter the LOWEST one for me now.");
                 int rangeStart = int.Parse(Console.ReadLine());
                 Console.WriteLine("And now let's get your second, HIGHER (numerically...), number.");
                 int rangeEnd = int.Parse(Console.ReadLine());
@@ -38,17 +38,20 @@ namespace Mahajan_Lucky_Numbers
                     else if (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
                     {
                         Console.WriteLine("That's not a number I can use.");
-
+                        //PROBLEM
                         while (userGuess[i] <= rangeStart || userGuess[i] >= rangeEnd)
                         {
-                            Console.WriteLine("Enter a number for me");
-                            userGuess[i] = int.Parse(Console.ReadLine());
+                            for (int j = 0; j <= 0; j++)
+                            {Console.WriteLine("Enter a number for me");
+                             userGuess[i] = int.Parse(Console.ReadLine());
+                            }
                         }
                     }
                 }
 
 
-                Console.WriteLine("\n\n\n\n\nAnd now the great and powerful Luckster Number Generator will give you 6 numbers.");
+                Console.WriteLine("\nAnd now the great and powerful Luckster Number Generator will give you 6 numbers.\n\n");
+
 
                 //PART II
                 int[] randoGen = new int[6];
@@ -63,6 +66,7 @@ namespace Mahajan_Lucky_Numbers
                 //PART III
                 int jackpot = 2468975;
                 int numbersRight = 0;
+                Console.WriteLine("\n\n\n\nYou are so VERY CLOSE TO $" +jackpot+ "!");                
 
                 foreach (int guess in userGuess)
                 {
@@ -93,22 +97,21 @@ namespace Mahajan_Lucky_Numbers
 
 
                 }
+                Console.WriteLine("You guessed " +numbersRight+ " numbers right!");
                 int userWinnings = jackpot / numbersRight;
                 Console.WriteLine("Your winnings are $" + userWinnings + "!");
-                break;
+
+                Console.WriteLine("Would you like to play again?");
+                answer = Console.ReadLine();
+                while (answer == "yes")
+                    { break;
+                    }
             }
-            
+           
+
             Console.WriteLine("Thanks for playing!");
 
-
-
-
-
-
-
-
-
-
+            
 
 
             //userGuess[0] = int.Parse(Console.ReadLine());
